@@ -8,9 +8,17 @@
     <title>PixelPalette</title>
 </head>
 <body>
-    <input type="range" id="gridSizeSlider" min="1" max="100" value="16">
+    <input type="range" id="gridSizeSlider" min="1" max="64" value="16">
     <p id="gridSizeText">Grid Size: 16</p>
+    <span id="currentColor">Current Color: </span>
+    <input type="color" id="colorPicker">
+    <button id="toggleRandomColor">Rainbow</button>
+    <h3>Shading</h3>
+    <button id="toggleDarken">Darken</button>
+    <button id="toggleLighten">Lighten</button>
     <div id="container" class="grid-container"></div>
+    <button id="clearButton">Reset Canvas</button>
+    <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
+
 </html>

@@ -6,16 +6,21 @@
     width: 960px;
     margin: 0 auto;
     background-color: #f0f0f0;
-    padding: 10px;
+    padding: 0;
 }
 
 .grid-square {
     border: 1px solid #ccc;
     width: 100%;
+    margin: 0;
     
     background-color: white;
 }
 
-.grid-square:hover {
-    background-color: black;
+.grid-container.drawing .grid-square:hover {
+    background-color: unset;
+}
+
+.active {
+    background-color: #ddd;
 }
