@@ -1,5 +1,21 @@
-.grid-container {
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
     border: 1px solid red;
-    height: 600px;  
-    width: 600px;
+    height: 960px;  
+    width: 960px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.grid-square {
+    border: 1px solid #ccc;
+    width: 100%;
+    
+    background-color: white;
+}
+
+.grid-square:hover {
+    background-color: black;
 }
