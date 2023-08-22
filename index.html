@@ -4,20 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css"
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700&display=swap">
     <title>PixelPalette</title>
 </head>
 <body>
-    <input type="range" id="gridSizeSlider" min="1" max="64" value="16">
-    <p id="gridSizeText">Grid Size: 16</p>
-    <span id="currentColor">Current Color: </span>
-    <input type="color" id="colorPicker">
-    <button id="toggleRandomColor">Rainbow</button>
-    <h3>Shading</h3>
-    <button id="toggleDarken">Darken</button>
-    <button id="toggleLighten">Lighten</button>
-    <div id="container" class="grid-container"></div>
-    <button id="clearButton">Reset Canvas</button>
+    <header>
+        <h1>PixelPalette</h1>
+        <p>A digital canvas for creativity</p>
+    </header>
+    <div class="content-wrapper">
+        <aside class="settings">
+            <h3>Canvas</h3>
+            <div>
+                <input type="range" id="gridSizeSlider" min="1" max="64" value="16">
+                <p id="gridSizeText">Size: 16</p>
+            </div>
+            <div>
+            <h3>Color</h3>
+                <label id="colorLabel">
+                <span>Color</span>
+                <input type="color" id="colorPicker">
+                </label>
+            </div>
+            <div>
+                <button id="toggleRandomColor">Rainbow</button>
+            </div>
+            <h3>Shading</h3>
+            <div>
+                <button id="toggleDarken">Darken</button>
+                <button id="toggleLighten">Lighten</button>
+            </div>
+            <h3>Reset</h3>
+            <div>
+                <button id="clearButton">Clear Canvas</button>
+            </div>
+        </aside>
+        <div id="container" class="grid-container"></div>
+    </div>
+    <footer>Made by RD</footer>
     <script src="main.js"></script>
 </body>
 

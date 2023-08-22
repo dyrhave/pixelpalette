@@ -1,26 +1,206 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 20px;
+}
+
+
 #container {
     display: grid;
     grid-template-columns: repeat(16, 1fr);
-    border: 1px solid red;
+    border: none;
     height: 960px;  
     width: 960px;
-    margin: 0 auto;
+    margin: 20px auto;
     background-color: #f0f0f0;
     padding: 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .grid-square {
-    border: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
     width: 100%;
     margin: 0;
-    
     background-color: white;
+    transition: background-color 0.3s;
 }
 
-.grid-container.drawing .grid-square:hover {
-    background-color: unset;
+button {
+    background-color: #a8dadc;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
-.active {
-    background-color: #ddd;
+
+button:hover {
+    background-color: #7aa0a3;
 }
+
+button:active, .active {
+    background-color: #5a8083;
+}
+
+h3 {
+    margin-left: 5px;
+    font-weight: normal;
+    color: #555;
+}
+
+input[type="range"], input[type="color"] {
+    margin: 5px;
+}
+
+#currentColor, #gridSizeText {
+    margin: 5px;
+}
+
+header {
+    text-align: center;
+    background-color: #a8dadc;
+    padding: 20px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+    font-size: 2.5em;
+}
+
+header p {
+    font-weight: 300;
+    margin-top: 5px;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px 0;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+footer p {
+    font-weight: 300;
+    margin: 0;
+    color: #555;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.settings {
+    flex: 0 0 240px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 250px;
+}
+
+.settings h2, .settings h3 {
+    font-weight: 700;
+    margin-top: 0;
+    color: #333;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.setting div {
+    margin-top: 20px
+}
+
+.settings > div {
+    margin-bottom: 15px;
+}
+
+.settings button {
+    display: block;
+    width: 85%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#colorLabel {
+    display: block;
+    width: calc(85% - 50px);
+    background-color: #a8dadc;
+    border: none;
+    padding: 15px 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    text-align: center;
+    position: relative;
+}
+
+#colorLabel:hover {
+    background-color: #7aa0a3;
+}
+
+#colorLabel:active {
+    background-color: #5a8083;
+}
+
+#colorLabel span {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+#colorPicker {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#toggleRandomColor {
+    position: relative;
+    color: transparent;
+    background-color: #a8dadc; 
+}
+
+#toggleRandomColor::before {
+    content: "Rainbow";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(to left, red 0%, red 15%, orange 25%, yellow 35%, green 45%, blue 55%, indigo 65%, violet 75%, violet 100%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+}
+
